@@ -1,12 +1,14 @@
-console.log("Hello!");
-
-// Import react lib
 import React from 'react';
 import ReactDOM from 'react-dom';
+import ImageList from './components/image_list';
+
 // create a component
 const App = () => {
   return(
-      <div>React App #2</div>
+      <div>
+        This is app
+        <ImageList />
+      </div>
   );
 };
 
