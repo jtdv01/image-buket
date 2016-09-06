@@ -1,15 +1,19 @@
 import React from 'react';
+import ImageScore from './image_score';
+
 
 const ImageDetail = (props) => {
   return(
-        <li className="ImageDetail">
+        <li className="ImageDetail media list-group-item">
           <div className="media-left">
             <img src={props.image.link} alt=""/>
           </div>
           <div className="media-body">
-            <div className="media-heading">
+            <h4 className="media-heading">
               {props.image.title}
-            </div>
+            </h4>
+            <p>{props.image.description}</p>
+            <ImageScore ups={props.image.ups} downs={props.image.downs}/>
           </div>
         </li>
   );

@@ -9,7 +9,9 @@ import ImageDetail from './image_detail';
 
 // Create image list component
 const ImageList = (props) => {
-  const RenderedImages = props.images.map(image =>
+  const validImages = props.images.filter(x => !x.is_album);
+
+  const RenderedImages = validImages.map(image =>
     <ImageDetail key={image.title} image={image}/>
   );
 
